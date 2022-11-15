@@ -1,0 +1,182 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer components{
+
+    .layout{
+        @apply flex flex-col  items-stretch  rounded-3xl w-full space-y-4 p-4
+    }
+
+    .layout-lg{
+        @apply w-4/5 h-[700px] flex-row space-y-0 p-0
+    }
+
+    .current-panel{
+        @apply border-r py-2 border-sky-900 flex flex-col text-gray-200  items-center justify-around  bg-cyan-900 bg-opacity-60 rounded-xl
+    }
+
+    .current-panel-lg{
+        @apply px-4
+    }
+
+
+    .right-panel{
+        @apply text-white  h-full   flex-1 flex items-center justify-around flex-col  overflow-auto xl:overflow-hidden
+    }
+
+    .right-panel-lg{
+        @apply pl-6 space-y-4
+    }
+
+
+    .right-top-panel{
+        @apply flex flex-col items-center  bg-cyan-900  rounded-xl  bg-opacity-60  w-full  py-2 order-2 mt-4
+    }
+
+    .right-top-panel-lg{
+        @apply  h-2/3 space-y-4 py-0 order-none mt-0
+    }
+
+    .days-panel{
+        @apply grid grid-cols-2 w-full  gap-4 p-4 
+    }
+
+    .days-panel-lg{
+        @apply flex flex-1 pb-4 px-4 space-x-3 pt-0 overflow-auto
+    }
+
+    .day-buttons{
+        @apply flex items-center justify-between px-2  text-gray-200  w-full  border-b overflow-auto
+    }
+
+    .day-buttons-lg{
+        @apply space-x-3  h-1/4 xl:justify-center  border-none
+    }
+
+    .cities-button{
+        @apply bg-white  flex items-center justify-center rotate-90 rounded-full hover:bg-gray-800 hover:text-white transition-all w-10 h-10
+    }
+
+    .cities-button-lg{
+        @apply  rotate-0 w-20 h-20
+    }
+
+    .cities-container-lg{
+        @apply flex-1  flex flex-wrap  items-center justify-center bg-green-200
+    }
+
+
+}
+
+@layer base {
+
+    @import url(//fonts.googleapis.com/css?family=Lato:300:400);
+
+    html {
+        font-family: 'Lato', sans-serif;
+    }
+
+   
+}
+
+h1 {
+    font-weight: 300;
+    letter-spacing: 2px;
+    font-size: 48px;
+}
+
+
+
+.header {
+    position: relative;
+    text-align: center;
+    background: linear-gradient(60deg, rgba(84, 58, 183, 1) 0%, rgba(0, 172, 193, 1) 100%);
+    color: white;
+}
+
+.logo {
+    width: 50px;
+    fill: white;
+    padding-right: 15px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.inner-header {
+    height: 65vh;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+
+.waves {
+    position: relative;
+    width: 100%;
+    height: 15vh;
+    margin-bottom: -7px;
+    /*Fix for safari gap*/
+    min-height: 100px;
+    max-height: 150px;
+}
+
+.content {
+    position: relative;
+    height: 20vh;
+    text-align: center;
+    background-color: white;
+}
+
+/* Animation */
+
+.parallax>use {
+    animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+}
+
+.parallax>use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+}
+
+.parallax>use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+}
+
+.parallax>use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+}
+
+.parallax>use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+}
+
+@keyframes move-forever {
+    0% {
+        transform: translate3d(-90px, 0, 0);
+    }
+
+    100% {
+        transform: translate3d(85px, 0, 0);
+    }
+}
+
+/*Shrinking for mobile*/
+@media (max-width: 768px) {
+    .waves {
+        height: 40px;
+        min-height: 40px;
+    }
+
+    .content {
+        height: 30vh;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+}
