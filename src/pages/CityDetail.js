@@ -19,7 +19,10 @@ const CityDetail = () => {
     const [pagination, setPagination] = useState(0)
 
     const date = new Date();
-    const filter = date.getMonth() + 1 + "-" + Number(date.getDate() + pagination);
+    let filter = date.getMonth() + 1 + "-" + Number(date.getDate() + pagination);
+    if ((date.getMonth()+1 === 11 || 4 || 6 || 9) && date.getDate() + pagination > 30) {
+        filter = date.getMonth() +2 + "-0" +    (Number(date.getDate() + pagination) - 30)
+    }
 
     const weekday = ["Pazar", "Pazartesi", "Salı", "Carsamba", "Persembe", "Cuma", "Cumartesi"];
 
