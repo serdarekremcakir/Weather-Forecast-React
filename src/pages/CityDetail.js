@@ -14,14 +14,32 @@ const CityDetail = () => {
 
     const state = useSelector(state => state.api)
 
-    const navigate = useNavigate();
-
     const [pagination, setPagination] = useState(0)
 
     const date = new Date();
-    let filter = date.getMonth() + 1 + "-" + Number(date.getDate() + pagination);
-    if ((date.getMonth()+1 === 11 || 4 || 6 || 9) && date.getDate() + pagination > 30) {
-        filter = date.getMonth() +2 + "-0" +    (Number(date.getDate() + pagination) - 30)
+    const dayofweek = Number(date.getDate() + pagination)  < 10 ? "0" + Number(date.getDate() + pagination) : Number(date.getDate() + pagination);
+    let filter = date.getMonth() + 1 + "-" + dayofweek;
+    
+
+
+    // Şubat
+    if(date.getMonth()+1 === 2){
+        if (date.getFullYear%4 !== 0 && Number(dayofweek) > 28) {
+            filter = date.getMonth() +2 + "-0" +  (Number(dayofweek) - 28)
+        }
+        else if(Number(dayofweek) > 29){
+            filter = date.getMonth() +2 + "-0" +  (Number(dayofweek) - 29)
+        }
+    }
+    
+    // 30 çeken aylar
+    if ((date.getMonth()+1 === 11 || 4 || 6 || 9) && Number(dayofweek) > 30) {
+        filter = date.getMonth() +2 + "-0" +  (Number(dayofweek) - 30)
+    }
+
+    //31 çeken aylar
+    else if ((date.getMonth()+1 === 12 || 10 || 8 || 7 || 5 || 3 || 1) && Number(dayofweek) > 31) {
+        filter = date.getMonth() +2 + "-0" +  (Number(dayofweek) - 31)
     }
 
     const weekday = ["Pazar", "Pazartesi", "Salı", "Carsamba", "Persembe", "Cuma", "Cumartesi"];

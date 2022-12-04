@@ -25,7 +25,7 @@
     },
     {
       "id": 4,
-      "name": "Agrı",
+      "name": "Ağrı",
       "latitude": "39.7191",
       "longitude": "43.0503",
       "population": 547210,
@@ -177,7 +177,7 @@
     },
     {
       "id": 23,
-      "name": "Elâzıg",
+      "name": "Elazığ",
       "latitude": "38.6810",
       "longitude": "39.2264",
       "population": 574304,
@@ -201,7 +201,7 @@
     },
     {
       "id": 26,
-      "name": "Eskisehir",
+      "name": "Eskişehir",
       "latitude": "39.7767",
       "longitude": "30.5206",
       "population": 826716,
@@ -225,7 +225,7 @@
     },
     {
       "id": 29,
-      "name": "Gümüshane",
+      "name": "Gümüşhane",
       "latitude": "40.4386",
       "longitude": "39.5086",
       "population": 151449,
@@ -233,7 +233,7 @@
     },
     {
       "id": 30,
-      "name": "Hakkâri",
+      "name": "Hakkari",
       "latitude": "37.5833",
       "longitude": "43.7333",
       "population": 278775,
@@ -265,7 +265,7 @@
     },
     {
       "id": 34,
-      "name": "Istanbul",
+      "name": "İstanbul",
       "latitude": "41.0053",
       "longitude": "28.9770",
       "population": 14657434,
@@ -273,7 +273,7 @@
     },
     {
       "id": 35,
-      "name": "Izmir",
+      "name": "İzmir",
       "latitude": "38.4189",
       "longitude": "27.1287",
       "population": 4168415,
@@ -313,7 +313,7 @@
     },
     {
       "id": 40,
-      "name": "Kırsehir",
+      "name": "Kırşehir",
       "latitude": "39.1425",
       "longitude": "34.1709",
       "population": 225562,
@@ -361,7 +361,7 @@
     },
     {
       "id": 46,
-      "name": "Kahramanmaras",
+      "name": "Kahramanmaraş",
       "latitude": "37.5858",
       "longitude": "36.9371",
       "population": 1096610,
@@ -377,7 +377,7 @@
     },
     {
       "id": 48,
-      "name": "Mugla",
+      "name": "Muğla",
       "latitude": "37.2153",
       "longitude": "28.3636",
       "population": 908877,
@@ -385,7 +385,7 @@
     },
     {
       "id": 49,
-      "name": "Mus",
+      "name": "Muş",
       "latitude": "38.9462",
       "longitude": "41.7539",
       "population": 408728,
@@ -393,7 +393,7 @@
     },
     {
       "id": 50,
-      "name": "Nevsehir",
+      "name": "Nevşehir",
       "latitude": "38.6939",
       "longitude": "34.6857",
       "population": 286767,
@@ -401,7 +401,7 @@
     },
     {
       "id": 51,
-      "name": "Nigde",
+      "name": "Niğde",
       "latitude": "37.9667",
       "longitude": "34.6833",
       "population": 346114,
@@ -465,7 +465,7 @@
     },
     {
       "id": 59,
-      "name": "Tekirdag",
+      "name": "Tekirdağ",
       "latitude": "40.9833",
       "longitude": "27.5167",
       "population": 937910,
@@ -497,7 +497,7 @@
     },
     {
       "id": 63,
-      "name": "Sanlıurfa",
+      "name": "Şanlıurfa",
       "latitude": "37.1591",
       "longitude": "38.7969",
       "population": 1892320,
@@ -505,7 +505,7 @@
     },
     {
       "id": 64,
-      "name": "Usak",
+      "name": "UŞak",
       "latitude": "38.6823",
       "longitude": "29.4082",
       "population": 353048,
@@ -577,7 +577,7 @@
     },
     {
       "id": 73,
-      "name": "Sırnak",
+      "name": "Şırnak",
       "latitude": "37.4187",
       "longitude": "42.4918",
       "population": 490184,
@@ -601,7 +601,7 @@
     },
     {
       "id": 76,
-      "name": "Igdır",
+      "name": "Iğdır",
       "latitude": "39.8880",
       "longitude": "44.0048",
       "population": 192435,

@@ -15,7 +15,7 @@ const CityItem = (props) => {
 
         <div className=' flex items-center justify-center w-1/2 lg:w-1/4 py-3  '>
             <button
-                className=' relative flex items-center justify-center    rounded-2xl py-4 px-1 hover:bg-gray-800 transition-all group lg:w-1/2 w-11/12 min-w-[130px] bg-white hover:text-white'
+                className=' relative flex items-center justify-center    rounded-2xl py-3 sm:py-6 md:py-4 px-1 hover:bg-gray-800 transition-all group lg:w-1/2 w-11/12 min-w-[130px] bg-white hover:text-white'
                 onClick={clickHandle}>
                 <div className='absolute right-1 top-1 bg-cyan-900 text-white rounded-2xl px-2 text-sm font-semibold'>
                     {props.id < 10 ? `0${props.id}` : props.id}
