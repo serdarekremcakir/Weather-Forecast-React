@@ -42,7 +42,7 @@ const CityDetail = () => {
         filter = date.getMonth() +2 + "-0" +  (Number(dayofweek) - 31)
     }
 
-    const weekday = ["Pazar", "Pazartesi", "Salı", "Carsamba", "Persembe", "Cuma", "Cumartesi"];
+    const weekday = ["Pazar", "Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma", "Cumartesi"];
 
     const list = state.data && state.data.list.filter(item => item.dt_txt.indexOf(filter) !== -1);
 
@@ -119,7 +119,7 @@ const CityDetail = () => {
 
 
                             <div className='w-full bg-cyan-900 bg-opacity-60 p-4 rounded-xl flex-1 flex flex-col justify-between ' id='right-bottom-panel '>
-                                <h3 className='text-3xl font-semibold mb-4 text-gray-200 '>Bugünün Verileri</h3>
+                                <h3 className='text-3xl font-semibold mb-4 text-gray-200 '>Güncel Veriler</h3>
                                 {state.dataCurrent &&
                                     <div className='flex lg:flex-row flex-col flex-auto lg:items-center lg:justify-between lg:space-x-6  space-y-4 lg:space-y-0'>
 
@@ -128,11 +128,11 @@ const CityDetail = () => {
                                             <div className='inline-flex items-center justify-center'><span className='text-3xl font-bold mr-2'>{state.dataCurrent.wind.speed}</span> m/s</div>
                                         </div>
                                         <div className='bg-gray-800 flex-1 h-full rounded-xl flex flex-col items-center justify-center lg:py-2 relative py-8'>
-                                            <h3 className='text-md absolute top-2 left-3 underline'>Humidty / Nem</h3>
+                                            <h3 className='text-md absolute top-2 left-3 underline'>Nem</h3>
                                             <div className='inline-flex items-center justify-center '><span className='text-3xl font-bold mr-2'>{state.dataCurrent.main.humidity}</span> %</div>
                                         </div>
                                         <div className='bg-gray-800 flex-1 h-full rounded-xl flex flex-col items-center justify-center lg:py-2 relative py-8'>
-                                            <h3 className='text-md absolute top-2 left-3 underline'>Pressure / Basınç</h3>
+                                            <h3 className='text-md absolute top-2 left-3 underline'>Basınç</h3>
                                             <div className='inline-flex items-center justify-center '><span className='text-3xl font-bold mr-2'>{state.dataCurrent.main.pressure}</span> hPa</div>
                                         </div>
                                     </div>}

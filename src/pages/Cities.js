@@ -27,8 +27,8 @@ const Cities = () => {
 
                 <div className='xl:w-3/4 w-full flex flex-col items-center flex-1 py-6 lg:py-0  '>
                     <input
-                        className='border-2 border-black w-1/2 min-w-[250px] max-w-[600px] rounded-full p-3 outline-none placeholder:text-xl '
-                        type="text" placeholder='Sehir Ara' onChange={e => changeHandle(e)} />
+                        className='border-2 border-black w-1/2 min-w-[250px] max-w-[600px] rounded-full p-3 outline-none '
+                        type="text" placeholder='Şehir Ara' onChange={e => changeHandle(e)} />
 
                     <div className={`w-full  flex lg:flex-row flex-col  justify-center lg:justify-between items-center   relative  px-2 py-4 lg:py-0  ${filteredCities.length < 81 ? 'md:flex-1' : 'flex-1'} `}>
 
