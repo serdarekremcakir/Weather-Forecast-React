@@ -42,7 +42,9 @@ const CityDetail = () => {
         filter = date.getMonth() +2 + "-0" +  (Number(dayofweek) - 31)
     }
 
-    const weekday = ["Pazar", "Pazartesi", "Salı", "Çarşamba", "Perşembe", "Cuma", "Cumartesi"];
+    const weekday = ["Pazar", "Pazartesi", "Sali", "Çarşamba", "Perşembe", "Cuma", "Cumartesi"];
+    const dayList = weekday.map((item,index) =>   weekday[(date.getDay() + index) % 7])
+  
 
     const list = state.data && state.data.list.filter(item => item.dt_txt.indexOf(filter) !== -1);
 
@@ -85,7 +87,7 @@ const CityDetail = () => {
 
                                 {/* Days of the week buttons */}
                                 <div className='day-buttons lg:day-buttons-lg  pb-1 lg:pb-0'>
-                                    {weekday.slice(date.getDay(), date.getDay() + 5).map((day, index) =>
+                                            {dayList.slice(0,5).map((day, index) =>
                                         <button key={index}
                                             className={index === 0 ? 'bg-gray-800 rounded-full lg:px-6 lg:py-3 px-4 py-2 ' : 'rounded-full lg:px-6 lg:py-3 px-4 py-2 lg:hover:bg-gray-700'}
                                             onClick={(e) => {
@@ -95,7 +97,7 @@ const CityDetail = () => {
                                                     x.classList.add('lg:hover:bg-gray-700')
                                                 });
                                                 e.target.classList.add("bg-gray-800", "transition-all", "lg:hover:bg-gray-800")
-                                            }}>{weekday[date.getDay() + index]}</button>)}
+                                            }}>{dayList[index]}</button>)}
                                 </div>
 
 
